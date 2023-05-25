@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=qr, initial-scale=1.0">
+  <title>QR Code</title>
+</head>
+<body>
+  <div>
+  <h1>QR Code Generator</h1>
+  <h2>Enter a link to generate a QR Code</h2>
+  </div>
+  <form action="/" method="POST">
+    <input type="text" name="link" placeholder="Enter a link">
+    <button type="submit">Generate</button>
+  </form>
+  <div class="generated">
+    <img src="{{ data }}" alt="QR Code">
+    <p>Here you go gang.</p>
+  </div>
+</body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0rem 10rem;
+    gap: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: grey;
+  }
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+form button {
+  font-size: 1rem;
+  background: red;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+form button:hover {
+  background: pink;
+}
+generated {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+</style>
